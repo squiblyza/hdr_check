@@ -30,35 +30,115 @@ Prerequisites
 Installation
 
 Method 1: Using requirements.txt (recommended)
-```powershell
+```bash
 # Clone or download the repository
-git clone <repository-url>   # or download the files
+git clone <repository-url>
 cd headersec
 
 # Create and activate a virtual environment (recommended)
 python -m venv venv
-.\venv\Scripts\activate     # Windows
-source venv/bin/activate    # Linux/macOS
+# Linux/macOS
+source venv/bin/activate
+# Windows (PowerShell)
+venv\Scripts\Activate.ps1
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
 Method 2: Manual installation
-```powershell
+```bash
+# Install required packages directly
+pip install httpx>=0.25.0 rich>=13.6.0
+```
+# hdr_check
+
+Small CLI tool to fetch one or more URLs and report on common HTTP security headers.
+
+Features
+- Uses `httpx` for HTTP(S) requests (default timeout 8s, TLS verification on).
+- Uses `rich` for colored terminal output (green=PASS, red=FAIL, yellow=INFO).
+- Optional machine-readable JSON output via `--json`.
+- Checks: HSTS, Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy/Feature-Policy, Expect-CT, Cross-Origin policies (COOP/COEP), Set-Cookie flags, Server/X-Powered-By disclosures.
+- Exit codes: 0 = all PASS, 1 = any FAIL, 2 = network/runtime error or missing dependency.
+
+Prerequisites
+- Python 3.10+
+- Required packages: httpx, rich (see Installation section)
+
+Installation
+
+Method 1: Using requirements.txt (recommended)
+```bash
+# Clone or download the repository
+git clone <repository-url>
+cd headersec
+
+# Create and activate a virtual environment (recommended)
+python -m venv venv
+# Linux/macOS
+source venv/bin/activate
+# Windows (Command Prompt)
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+Method 2: Manual installation
+```bash
+# Install required packages directly
+pip install httpx>=0.25.0 rich>=13.6.0
+```
+# hdr_check
+
+Small CLI tool to fetch one or more URLs and report on common HTTP security headers.
+
+Features
+- Uses `httpx` for HTTP(S) requests (default timeout 8s, TLS verification on).
+- Uses `rich` for colored terminal output (green=PASS, red=FAIL, yellow=INFO).
+- Optional machine-readable JSON output via `--json`.
+- Checks: HSTS, Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy/Feature-Policy, Expect-CT, Cross-Origin policies (COOP/COEP), Set-Cookie flags, Server/X-Powered-By disclosures.
+- Exit codes: 0 = all PASS, 1 = any FAIL, 2 = network/runtime error or missing dependency.
+
+Prerequisites
+- Python 3.10+
+- Required packages: httpx, rich (see Installation section)
+
+Installation
+
+Method 1: Using requirements.txt (recommended)
+```bash
+# Clone or download the repository
+git clone <repository-url>
+cd headersec
+
+# Create and activate a virtual environment (recommended)
+python -m venv venv
+# Linux/macOS
+source venv/bin/activate
+# Windows (Command Prompt or PowerShell)
+venv\\Scripts\\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+Method 2: Manual installation
+```bash
 # Install required packages directly
 pip install httpx>=0.25.0 rich>=13.6.0
 ```
 
 After installation:
-1. Ensure `hdr_check.py` is executable (on Linux/macOS) or run with `python hdr_check.py` on Windows
+1. Ensure `hdr_check.py` is executable (on Linux/macOS) or run with `python hdr_check.py`.
 2. Test the installation:
-```powershell
+```bash
 python hdr_check.py --help
 ```
 
 Quick usage
-```powershell
+```bash
 # Basic single URL
 python hdr_check.py https://example.com
 
@@ -83,17 +163,4 @@ Notes
 License
 MIT-style permissive for private use. Modify as needed.
 
-## Pushing to GitHub
-After you review the files, initialize git locally and push to a new GitHub repo:
-
-```powershell
-git init
-git add .
-git commit -m "Initial commit: hdr_check tool"
-# Create a repository on GitHub (through the website or gh cli), then add the remote and push
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git branch -M main
-git push -u origin main
-```
-
-You can also enable the provided GitHub Actions workflow (already included at `.github/workflows/ci.yml`) to run CI on pushes and PRs.
+You can enable the provided GitHub Actions workflow (already included at `.github/workflows/ci.yml`) to run CI on pushes and PRs.

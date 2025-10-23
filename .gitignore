@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+.env.*
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/
+build/
+dist/
+coverage.xml
+htmlcov/
+.coverage
+*.log
+
+# virtual environment
+.env
+.venv
+
+# macOS
+*.DS_Store
+
+# logs
+logs
+*.log
+
+# editor settings
+.vscode/
+.idea/

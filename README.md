@@ -109,9 +109,9 @@ Installation
 
 Method 1: Using requirements.txt (recommended)
 ```bash
-# Clone or download the repository
-git clone <repository-url>
-cd headersec
+# Clone the repository
+git clone https://github.com/squiblyza/hdr_check.git
+cd hdr_check
 
 # Create and activate a virtual environment (recommended)
 python -m venv venv

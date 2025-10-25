@@ -27,7 +27,8 @@ PASS   Set-Cookie flags              Secure; HttpOnly; SameSite=Lax
 Exit codes: 0=all PASS, 1=any FAIL, 2=network/runtime error
 
 OWASP references mapping (examples):
-- HSTS: https://owasp.org/www-project-top-ten/ (see transport security) and https://owasp.org/www-project-cheat-sheets/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
+- HSTS: https://owasp.org/www-project-top-ten/ (see transport security)
+- HSTS cheat sheet: https://owasp.org/www-project-cheat-sheets/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
 - CSP & Clickjacking: https://owasp.org/www-project-cheat-sheets/Content_Security_Policy_Cheat_Sheet/
 - X-Content-Type-Options: https://owasp.org/www-project-cheat-sheets/ (MIME sniffing recommendations)
 - Referrer-Policy: https://owasp.org/www-project-cheat-sheets/ (privacy headers)

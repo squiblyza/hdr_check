@@ -45,7 +45,6 @@ pip install -r requirements.txt
 python hdr_check.py https://example.com
 
 Options
-Flag
 --follow-redirects	#Follow redirects before analyzing headers
 --timeout	#Set request timeout in seconds (default: 8s)
 --json	#Output results in JSON format

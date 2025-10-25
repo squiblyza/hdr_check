@@ -52,7 +52,6 @@ except Exception:  # pragma: no cover - runtime import
 try:
     from rich.console import Console
     from rich.table import Table
-    from rich.text import Text
     from rich import box
 except Exception:  # pragma: no cover - runtime import
     print("Missing dependency: rich. Install with: pip install rich")
@@ -385,7 +384,7 @@ def enrich_results(results: List[Dict[str, Any]]) -> None:
             continue
         # add wstg_ref only if not present
         if "wstg_ref" not in r or not r.get("wstg_ref"):
-            ref, manual = cheats.get(name, (wstg_base, f"curl -sI {r.get('url','https://example.com')} | grep -i {name}"))
+            ref, manual = cheats.get(name, (wstg_base, f"curl -sI {r.get('url', 'https://example.com')} | grep -i {name}"))
             # attach short WSTG/cheatsheet pointer
             r["wstg_ref"] = ref
             # if there's already a manual_test, don't override
@@ -517,7 +516,7 @@ def format_output(results: List[Dict[str, Any]], url: str, headers: Dict[str, st
         console.print("[bold red]Security Issues Found:[/bold red]")
         for r in results:
             if r["status"] == "FAIL":
-                console.print(f"[red]❌ {r['name']}:[/red] {r.get('recommendation','')}")
+                console.print(f"[red]❌ {r['name']}:[/red] {r.get('recommendation', '')}")
 
     return 1 if any(r["status"] == "FAIL" for r in results) else 0
 

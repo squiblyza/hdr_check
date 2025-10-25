@@ -35,8 +35,11 @@ git clone https://github.com/squiblyza/hdr_check.git
 cd hdr_check
 pip install -r requirements.txt
 
-🧑‍💻 Usage
+---
 
+## 🧑‍💻 Usage
+
+```bash
 Run the script directly from the command line:
 
 python hdr_check.py https://example.com
@@ -51,3 +54,5 @@ Flag	Description
 You can also check multiple URLs:
 
 python hdr_check.py https://example.com https://target.com --follow-redirects
+
+---

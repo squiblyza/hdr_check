@@ -1,6 +1,6 @@
 # 🔍 HDR CHECK
 
-A lightweight **Python CLI tool** for penetration testers and security engineers to quickly assess **HTTP response headers** for missing or misconfigured security controls — aligned with the [**OWASP Web Security Testing Guide (WSTG)**](https://owasp.org/www-project-web-security-testing-guide/).
+A lightweight **Python CLI tool** for penetration testers and security engineers to quickly assess **HTTP response headers** for missing or misconfigured security controls aligned with the [**OWASP Web Security Testing Guide (WSTG)**](https://owasp.org/www-project-web-security-testing-guide/).
 
 This tool helps you identify common header misconfigurations that weaken browser-level protections and provides **clear, high-level remediation recommendations**.
 
@@ -35,14 +35,12 @@ git clone https://github.com/squiblyza/hdr_check.git
 cd hdr_check
 pip install -r requirements.txt
 
-## 🧑‍💻 Usage
+🧑‍💻 Usage
 
 Run the script directly from the command line:
 
-```bash
 python hdr_check.py https://example.com
 
-```bash
 Options
 Flag	Description
 --follow-redirects	Follow redirects before analyzing headers

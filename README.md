@@ -54,4 +54,3 @@ You can also check multiple URLs:
 
 python hdr_check.py https://example.com https://target.com --follow-redirects
 
----

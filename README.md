@@ -40,16 +40,16 @@ pip install -r requirements.txt
 ## 🧑‍💻 Usage
 
 ```bash
-Run the script directly from the command line:
+#Run the script directly from the command line:
 
 python hdr_check.py https://example.com
 
 Options
-Flag	Description
---follow-redirects	Follow redirects before analyzing headers
---timeout	Set request timeout in seconds (default: 8s)
---json	Output results in JSON format
---help	Show usage info
+Flag
+--follow-redirects	#Follow redirects before analyzing headers
+--timeout	#Set request timeout in seconds (default: 8s)
+--json	#Output results in JSON format
+--help	#Show usage info
 
 You can also check multiple URLs:
 
